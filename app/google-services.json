@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "938596943232",
+    "firebase_url": "https://travelguide-1a8fa-default-rtdb.firebaseio.com",
+    "project_id": "travelguide-1a8fa",
+    "storage_bucket": "travelguide-1a8fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938596943232:android:7595824fef5f8237e2ad65",
+        "android_client_info": {
+          "package_name": "com.hemanthS3083018.travelguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjPn5_DdyzRs3iZNKgmg0LEQy9DxzxokM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
