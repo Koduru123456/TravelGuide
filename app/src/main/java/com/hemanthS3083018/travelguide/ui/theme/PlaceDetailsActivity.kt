@@ -16,6 +16,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -50,7 +52,9 @@ fun ViewDetailsScreen() {
     val context = LocalContext.current as Activity
 
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
     ) {
 
         Row(
@@ -84,17 +88,18 @@ fun ViewDetailsScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(200.dp),
-            painter = painterResource(id=selectedPlace.placeImage),
+            painter = painterResource(id = selectedPlace.placeImage),
             contentDescription = "Image",
             contentScale = ContentScale.FillBounds
         )
 
-        Text(text = selectedPlace.placeName,
+        Text(
+            text = selectedPlace.placeName,
             color = Color.Black,
             fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 6.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 6.dp)
 
         )
 
@@ -104,22 +109,24 @@ fun ViewDetailsScreen() {
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 2.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 2.dp)
         )
 
-        Text(text = "Timings",
+        Text(
+            text = "Timings",
             color = Color.Black,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 12.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 12.dp)
         )
 
-        Text(text =  selectedPlace.openingHours,
+        Text(
+            text = selectedPlace.openingHours,
             color = Color.Black,
             fontSize = 18.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 4.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 4.dp)
         )
 
         Text(
@@ -128,7 +135,7 @@ fun ViewDetailsScreen() {
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 8.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 8.dp)
         )
 
         Spacer(modifier = Modifier.height(6.dp))
@@ -139,12 +146,13 @@ fun ViewDetailsScreen() {
                 modifier = Modifier
                     .size(22.dp),
                 painter = painterResource(id = R.drawable.ic_call),
-                contentDescription ="call image"
+                contentDescription = "call image"
 
             )
 
             Spacer(modifier = Modifier.width(4.dp))
-            Text(text =  selectedPlace.contactNumberOne,
+            Text(
+                text = selectedPlace.contactNumberOne,
                 color = Color.Black,
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center,
@@ -162,12 +170,13 @@ fun ViewDetailsScreen() {
                 modifier = Modifier
                     .size(22.dp),
                 painter = painterResource(id = R.drawable.ic_call),
-                contentDescription ="call image"
+                contentDescription = "call image"
 
             )
 
             Spacer(modifier = Modifier.width(4.dp))
-            Text(text =  selectedPlace.contactNumberTwo,
+            Text(
+                text = selectedPlace.contactNumberTwo,
                 color = Color.Black,
                 fontSize = 18.sp,
                 textAlign = TextAlign.Center,
@@ -177,53 +186,54 @@ fun ViewDetailsScreen() {
 
         }
 
-        Text(text = "Attractions",
+        Text(
+            text = "Attractions",
             color = Color.Black,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 8.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 8.dp)
         )
 
-        Text(text =  selectedPlace.attractions,
+        Text(
+            text = selectedPlace.attractions,
             color = Color.Black,
             fontSize = 18.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 4.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 4.dp)
         )
 
-        Text(text = "Activities",
+        Text(
+            text = "Activities",
             color = Color.Black,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 8.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 8.dp)
         )
 
-        Text(text =  selectedPlace.activities,
+        Text(
+            text = selectedPlace.activities,
             color = Color.Black,
             fontSize = 18.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 4.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 4.dp)
         )
 
-        Text(text = "Description",
+        Text(
+            text = "Description",
             color = Color.Black,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(start = 12.dp,top = 8.dp)
+            modifier = Modifier.padding(start = 12.dp, top = 8.dp)
         )
 
-        Text(text =  selectedPlace.placeDescription,
+        Text(
+            text = selectedPlace.placeDescription,
             color = Color.Black,
             fontSize = 18.sp,
-            modifier = Modifier.padding(start = 12.dp,top = 4.dp)
+            textAlign = TextAlign.Justify,
+            modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 4.dp)
         )
-
-
-
-
 
 
     }
