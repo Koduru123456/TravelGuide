@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.hemanthS3083018.travelguide"
+    namespace = "hemanth.S3083018.travelguide"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.hemanthS3083018.travelguide"
+        applicationId = "hemanth.S3083018.travelguide"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

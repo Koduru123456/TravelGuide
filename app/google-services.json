@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:938596943232:android:7595824fef5f8237e2ad65",
+        "mobilesdk_app_id": "1:938596943232:android:bf76d13de5d5c7a4e2ad65",
         "android_client_info": {
-          "package_name": "com.hemanthS3083018.travelguide"
+          "package_name": "hemanth.S3083018.travelguide"
         }
       },
       "oauth_client": [],
